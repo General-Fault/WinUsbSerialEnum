@@ -81,7 +81,7 @@ namespace WinUsbSerialEnum
         {
             var buffer = new StringBuilder(256);
             var length = (uint)buffer.Capacity;
-            NativeMethods.SetupDiGetDeviceRegistryProperty(hDevInfoSet, ref devInfoData, NativeMethods.DeviceInfoRegistryProperty.SPDRP_FRIENDLYNAME, out uint _, buffer, length, out length);
+            NativeMethods.SetupDiGetDeviceRegistryProperty(hDevInfoSet, ref devInfoData, NativeMethods.DeviceInfoRegistryProperty.SPDRP_FRIENDLYNAME, out _, buffer, length, out _);
 
             return buffer.ToString();
         }
@@ -90,7 +90,7 @@ namespace WinUsbSerialEnum
         {
             var buffer = new StringBuilder(256);
             var length = (uint)buffer.Capacity;
-            NativeMethods.SetupDiGetDeviceRegistryProperty(hDevInfoSet, ref devInfoData, NativeMethods.DeviceInfoRegistryProperty.SPDRP_DEVICEDESC, out uint _, buffer, length, out length);
+            NativeMethods.SetupDiGetDeviceRegistryProperty(hDevInfoSet, ref devInfoData, NativeMethods.DeviceInfoRegistryProperty.SPDRP_DEVICEDESC, out _, buffer, length, out _);
 
             return buffer.ToString();
         }
@@ -100,7 +100,7 @@ namespace WinUsbSerialEnum
         {
             var buffer = new StringBuilder(256);
             var length = (uint)buffer.Capacity;
-            NativeMethods.SetupDiGetDeviceRegistryProperty(hDevInfoSet, ref devInfoData, NativeMethods.DeviceInfoRegistryProperty.SPDRP_HARDWAREID, out uint _, buffer, length, out length);
+            NativeMethods.SetupDiGetDeviceRegistryProperty(hDevInfoSet, ref devInfoData, NativeMethods.DeviceInfoRegistryProperty.SPDRP_HARDWAREID, out _, buffer, length, out _);
 
 
             var result = new Dictionary<string, string>();
