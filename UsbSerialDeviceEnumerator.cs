@@ -39,9 +39,9 @@ namespace WinUsbSerialEnum
                         PortName = GetPortName(hDevInfoSet, devInfoData),
                         FriendlyName = GetFriendlyName(hDevInfoSet, devInfoData),
                         Description = GetDescription(hDevInfoSet, devInfoData),
-                        Vid = id.ContainsKey("VID") ? id["VID"] : null,
-                        Pid = id.ContainsKey("PID") ? id["PID"] : null,
-                        Rev = id.ContainsKey("REV") ? id["REV"] : null,
+                        Vid = id.ContainsKey("VID") ? (int?)int.Parse(id["VID"], System.Globalization.NumberStyles.HexNumber) : null,
+                        Pid = id.ContainsKey("PID") ? (int?)int.Parse(id["PID"], System.Globalization.NumberStyles.HexNumber) : null,
+                        Rev = id.ContainsKey("REV") ? (int?)int.Parse(id["REV"], System.Globalization.NumberStyles.HexNumber) : null,
                     };
 
                     yield return device;
