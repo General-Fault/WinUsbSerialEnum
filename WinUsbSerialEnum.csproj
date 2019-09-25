@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net47;netstandard2.0</TargetFrameworks>
+    <Authors>Cody Barnes</Authors>
+    <Company>Cody Barnes</Company>
+    <Description>Provides a way to simply list all of the USB Serial ports on a Windows system. Works on Windows 7, 8, 8.1 and 10.</Description>
+    <Copyright>Copyright (c) 2019 Cody Barnes</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/General-Fault/WinUsbSerialEnum</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/General-Fault/WinUsbSerialEnum</RepositoryUrl>
+    <RepositoryType>GIT</RepositoryType>
+    <PackageTags>USB Serial Port .Net</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.0-alpha</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Win32.Registry" Version="4.6.0" />
+  </ItemGroup>
+
+</Project>
