@@ -6,3 +6,5 @@
 /bin
 /obj
 /WinUsbSerialEnum.csproj.user
+/Tests/bin/Release/netcoreapp2.1
+/Tests/obj

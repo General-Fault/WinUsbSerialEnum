@@ -13,13 +13,13 @@ namespace WinUsbSerialEnum
 {
     public static class UsbSerialDeviceEnumerator
     {
-        public static IEnumerable<UsbSerialDevice> EnumerateDevices(bool connectedOnly = true)
+        public static IEnumerable<UsbSerialDevice> EnumerateDevices(bool presentOnly = true)
         {
             var hDevInfoSet = NativeMethods.SetupDiGetClassDevs(
                 ref NativeMethods.GUID_DEVINTERFACE_SERENUM_BUS_ENUMERATOR,
                 null,
                 IntPtr.Zero,
-                connectedOnly ? NativeMethods.DiGetClassFlags.DIGCF_PRESENT : 0);
+                presentOnly ? NativeMethods.DiGetClassFlags.DIGCF_PRESENT : 0);
 
             if (hDevInfoSet.ToInt64() == NativeMethods.INVALID_HANDLE_VALUE)
             {
